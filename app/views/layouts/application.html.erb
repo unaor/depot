@@ -15,8 +15,9 @@
 <div id="side">
 	<span class="date"><%="#{@time.day}/#{@time.month}/#{@time.year}"%>
 <div id="cart">
-	<br/>
+	<%=hidden_div_if(@cart.line_items.empty?, id: 'cart') do%>
 	<%= render @cart%>	
+	<%end%>
 </div>		
 <ul>
 <li><a href="http://www....">Home</a></li>
